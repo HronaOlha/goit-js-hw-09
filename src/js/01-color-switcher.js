@@ -2,15 +2,15 @@ const startBtn = document.querySelector('button[data-start]');
 const stopBtn = document.querySelector('button[data-stop]');
 let timerId = null;
 
-stopBtn.setAttribute('disabled', true);
+stopBtn.disabled = true;
 
 startBtn.addEventListener('click', handleColorChange);
 stopBtn.addEventListener('click', handleStopColorChange);
 
 function handleColorChange() {
-  startBtn.setAttribute('disabled', true);
-  if (stopBtn.hasAttribute('disabled')) {
-    stopBtn.removeAttribute('disabled');
+  startBtn.disabled = true;
+  if (stopBtn.disabled) {
+    stopBtn.disabled = false;
   }
 
   timerId = setInterval(() => {
@@ -19,9 +19,9 @@ function handleColorChange() {
 }
 
 function handleStopColorChange() {
-  stopBtn.setAttribute('disabled', true);
-  if (startBtn.hasAttribute('disabled')) {
-    startBtn.removeAttribute('disabled');
+  stopBtn.disabled = true;
+  if (startBtn.disabled) {
+    startBtn.disabled = false;
   }
   clearInterval(timerId);
 }
