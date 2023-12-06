@@ -51,7 +51,7 @@ The HTML contains ready-made timer markup, end date selection fields, and a butt
 </div>
 ```
 
-####Flatpickr library
+#### Flatpickr library
 
 Use the flatpickr library to allow the user to cross-browser select an end date and time in a single interface element. In order to connect the CSS code of the library to the project, it is necessary to add one more import, in addition to the one described in the documentation.
 ```javascript
